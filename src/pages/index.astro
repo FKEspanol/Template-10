@@ -1,0 +1,63 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+---
+
+<MainLayout pageSubTitle="Home">
+    <section class="_container">
+        <h1 class="text-blue-500 roboto-regular-italic">Astro</h1>
+        <button class="btn btn-success text-white">Hello World</button>
+        <div role="alert" class="alert alert-success mt-3">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-current shrink-0 h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path></svg
+            >
+            <span>Your purchase has been confirmed!</span>
+        </div>
+        <div class="drawer">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+                <!-- Page content here -->
+                <label for="my-drawer" class="btn btn-primary drawer-button"
+                    >Open drawer</label
+                >
+            </div>
+            <div class="drawer-side">
+                <label
+                    for="my-drawer"
+                    aria-label="close sidebar"
+                    class="drawer-overlay"></label>
+                <ul
+                    class="menu p-4 w-80 min-h-full bg-base-200 text-base-content"
+                >
+                    <!-- Sidebar content here -->
+                    <li><a>Sidebar Item 1</a></li>
+                    <li><a>Sidebar Item 2</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Open the modal using ID.showModal() method -->
+        <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+        <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+                <h3 class="font-bold text-lg">Hello!</h3>
+                <p class="py-4">
+                    Press ESC key or click the button below to close
+                </p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+    </section>
+</MainLayout>

@@ -1,0 +1,13 @@
+---
+import Layout from "./Layout.astro";
+import Navbar from "../components/Navbar.astro";
+
+const { pageSubTitle } = Astro.props;
+---
+
+<Layout pageSubTitle={pageSubTitle}>
+    <Navbar />
+    <main>
+        <slot />
+    </main>
+</Layout>
