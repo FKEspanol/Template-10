@@ -21,10 +21,20 @@ const { pageSubTitle } = Astro.props;
 
         <!------Styles ----->
         <link rel="stylesheet" href="/css/font.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/vendors/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/vendors/glightbox.min.css" />
         <title>{`${SITE_TITLE} - ${pageSubTitle || ""}`}</title>
     </head>
     <body>
         <slot />
+
+        <script is:inline src="/vendors/glightbox.min.js"></script>
+        <script is:inline src="/vendors/isotope.pkgd.min.js"></script>
+        <script is:inline src="/vendors/swiper-bundle.min.js"></script>
     </body>
 </html>
 <style is:global>
@@ -32,7 +42,19 @@ const { pageSubTitle } = Astro.props;
         font-family: "Roboto", sans-serif;
         height: 100%;
         width: 100%;
-        background-color: #fff;
+        background-color: #fefefe;
+    }
+
+    .amatic-sc-regular {
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .amatic-sc-bold {
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
+        font-style: normal;
     }
 
     ._container {

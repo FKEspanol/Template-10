@@ -1,0 +1,124 @@
+---
+import { Image } from "astro:assets";
+import Section from "../components/Section.astro";
+import menuData from "../data/menuData.json";
+---
+
+<Section>
+    <div class="text-center mb-7">
+        <h2 class="text-smoke uppercase text-sm mb-2">OUR MENU</h2>
+        <p class="amatic-sc-regular text-5xl">
+            Check Our <span class="text-primary">Yummy Menu</span>
+        </p>
+    </div>
+    <!--------Filter buttons----------- -->
+    <section class="mt-14">
+        <ul id="menu-filters" class="mt-14 flex gap-x-3 justify-center">
+            <li>
+                <button
+                    class="filter-btn bg-primary text-white inline-flex items-center justify-center px-4 py-2 text-[12px] uppercase font-semibold leading-6 rounded-md shadow-sm focus:outline-none focus:shadow-none cursor-pointer transition-all duration-300"
+                    data-filter="*"
+                >
+                    All
+                </button>
+            </li>
+            {
+                ["breakfast", "lunch", "dinner"].map((i) => (
+                    <li>
+                        <button
+                            class="filter-btn bg-dim inline-flex items-center justify-center px-4 py-2 text-[12px] uppercase font-semibold leading-6 rounded-md shadow-sm focus:outline-none focus:shadow-none cursor-pointer transition-all duration-300"
+                            data-filter={`.filter-${i}`}
+                        >
+                            {i}
+                        </button>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+    <!---------Grid area------- -->
+    <section class="mt-8">
+        <ul class="flex flex-wrap menu-container">
+            {
+                menuData.map((i) => (
+                    <li
+                        class={`menu-item filter-${i.filter} sm:w-1/2 lg:w-2/6 p-2`}
+                    >
+                        <a
+                            href={`/img/menu/${i.image}`}
+                            data-gallery="menuGallery"
+                            class="menu-lightbox"
+                        >
+                            <img
+                                src={`/img/menu/${i.image}`}
+                                alt={`${i.filter}-image`}
+                                class="w-full rounded-2xl"
+                            />
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+</Section>
+
+<script is:inline type="module">
+    const select = (query, all = false) => {
+        query = query.trim();
+        if (all) {
+            return [...document.querySelectorAll(query)];
+        } else return document.querySelector(query);
+    };
+
+    const on = (event, query, listener, all = false) => {
+        let selectElement = select(query, all);
+        if (selectElement) {
+            if (all) {
+                selectElement.forEach((el) =>
+                    el.addEventListener(event, listener),
+                );
+            } else {
+                selectElement.addEventListener(event, listener);
+            }
+        }
+    };
+
+    const menuContainer = select(".menu-container");
+    var iso = new Isotope(menuContainer, {
+        itemSelector: ".menu-item",
+        layoutMode: "masonry",
+    });
+
+    // imagesLoaded(menuContainer, function () {
+    //     iso.layout();
+    // });
+
+    on(
+        "click",
+        "ul#menu-filters li button.filter-btn",
+        function (e) {
+            e.preventDefault();
+            select(".filter-btn", true).forEach((btn) => {
+                // reset all buttons first to default state which in this case is dark background and text white
+                btn.classList.remove("bg-primary");
+                btn.classList.remove("text-white");
+                btn.classList.add("bg-dim");
+            });
+
+            // now style the clikced button
+            this.classList.add("bg-primary");
+            this.classList.add("text-white");
+            this.classList.remove("bg-dim");
+            iso.arrange({ filter: this.getAttribute("data-filter") });
+        },
+        true,
+    );
+
+    /**
+     * Initiate menu lightbox
+     */
+
+    GLightbox({
+        selector: ".menu-lightbox",
+    });
+</script>

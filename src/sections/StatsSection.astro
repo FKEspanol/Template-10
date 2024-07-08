@@ -1,0 +1,27 @@
+---
+import Section from "../components/Section.astro";
+---
+
+<Section
+    id="stats-section"
+    className="relative bg-black bg-opacity-70 bg-cover bg-center before:absolute before:inset-0 before:bg-[url('/img/stats-bg.jpg')] before:bg-fixed before:opacity-70 before:-z-[1]"
+>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4">
+        <div class="p-7 text-white text-center">
+            <span class="text-5xl font-bold mb-3 block">232</span>
+            <small class="text-base">Clients</small>
+        </div>
+        <div class="p-7 text-white text-center">
+            <span class="text-5xl font-bold mb-3 block">298</span>
+            <small class="text-base">Projects</small>
+        </div>
+        <div class="p-7 text-white text-center">
+            <span class="text-5xl font-bold mb-3 block">1432</span>
+            <small class="text-base">Supports</small>
+        </div>
+        <div class="p-7 text-white text-center">
+            <span class="text-5xl font-bold mb-3 block">25</span>
+            <small class="text-base">Workers</small>
+        </div>
+    </div>
+</Section>

@@ -1,0 +1,40 @@
+[
+  {
+    "filter": "breakfast",
+    "image": "breakfast-1.jpg"
+  },
+  {
+    "filter": "lunch",
+    "image": "lunch-1.jpg"
+  },
+
+  {
+    "filter": "dinner",
+    "image": "dinner-2.jpg"
+  },
+  {
+    "filter": "lunch",
+    "image": "lunch-2.jpg"
+  },
+  {
+    "filter": "dinner",
+    "image": "dinner-2.jpg"
+  },
+  {
+    "filter": "breakfast",
+    "image": "breakfast-2.jpg"
+  },
+
+  {
+    "filter": "dinner",
+    "image": "dinner-3.jpg"
+  },
+  {
+    "filter": "breakfast",
+    "image": "breakfast-3.jpg"
+  },
+  {
+    "filter": "lunch",
+    "image": "lunch-3.jpg"
+  }
+]

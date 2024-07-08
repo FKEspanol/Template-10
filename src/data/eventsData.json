@@ -1,0 +1,26 @@
+[
+  {
+    "event": "Custom Parties",
+    "cost": "$99",
+    "info": "Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.",
+    "img": "events-1.jpg"
+  },
+  {
+    "event": "Private Parties",
+    "cost": "$499",
+    "info": "Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.",
+    "img": "events-2.jpg"
+  },
+  {
+    "event": "Birthday Parties",
+    "cost": "$289",
+    "info": "Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.",
+    "img": "events-3.jpg"
+  },
+  {
+    "event": "Christmas Parties",
+    "cost": "$289",
+    "info": "Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.",
+    "img": "events-3.jpg"
+  }
+]

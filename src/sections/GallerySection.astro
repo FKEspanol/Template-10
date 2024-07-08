@@ -1,0 +1,83 @@
+---
+import Section from "../components/Section.astro";
+
+const galleryImages = [
+    "gallery-1.jpg",
+    "gallery-2.jpg",
+    "gallery-3.jpg",
+    "gallery-4.jpg",
+    "gallery-5.jpg",
+    "gallery-6.jpg",
+    "gallery-7.jpg",
+    "gallery-8.jpg",
+];
+---
+
+<Section className="bg-dim">
+    <div class="text-center mb-14">
+        <h2 class="text-smoke uppercase text-sm mb-2">Gallery</h2>
+        <p class="amatic-sc-regular text-5xl">
+            Check <span class="text-primary">Our Gallery</span>
+        </p>
+    </div>
+    <div class="swiper gallery-slides">
+        <div class="swiper-wrapper">
+            {
+                galleryImages.map((i) => (
+                    <div class="swiper-slide">
+                        <a
+                            href={`/img/gallery/${i}`}
+                            data-gallery="gallery-images"
+                            class="gallery-lightbox"
+                        >
+                            <img src={`/img/gallery/${i}`} alt={i} />
+                        </a>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</Section>
+
+<script is:inline type="module">
+    const feedbackSwiper = new Swiper(".gallery-slides", {
+        // Optional parameters
+        speed: 600,
+        direction: "horizontal",
+        loop: true,
+
+        slidesPerView: "auto",
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+
+            992: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+        },
+
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: "swiper-pagination-bullet-active bg-primary",
+        },
+    });
+
+    GLightbox({
+        selector: ".gallery-lightbox",
+    });
+</script>

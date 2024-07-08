@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import Section from "../components/Section.astro";
+import reservationImg from "../assets/img/reservation.jpg";
+---
+
+<Section>
+    <div class="text-center mb-14">
+        <h2 class="text-smoke uppercase text-sm mb-2">BOOK A TABLE</h2>
+        <p class="amatic-sc-regular text-5xl">
+            Book <span class="text-primary">Your Stay</span> With Us
+        </p>
+    </div>
+    <div class="grid lg:grid-cols-3">
+        <div class="lg:col-span-1">
+            <Image src={reservationImg} alt="Reservation Image" />
+        </div>
+        <div class="lg:col-span-2">
+            <div class="w-full bg-dim h-full px-8 py-16 lg:py-0">
+                <form action="" class="h-full flex flex-col justify-center">
+                    <div class="text-center">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                class="md:col-span-1 p-2.5 rounded w-full border focus:outline-none focus:border-primary focus:ring-primary focus:ring-1"
+                                placeholder="Your Name"
+                            />
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                class="md:col-span-1 p-2.5 rounded w-full border focus:outline-none focus:border-primary focus:ring-primary focus:ring-1"
+                                placeholder="Your Email"
+                            />
+                            <input
+                                type="text"
+                                name="phone"
+                                id="phone"
+                                class="md:col-span-1 p-2.5 rounded w-full border focus:outline-none focus:border-primary focus:ring-primary focus:ring-1"
+                                placeholder="Your Phone"
+                            />
+                            <input
+                                type="text"
+                                name="date"
+                                id="date"
+                                class="md:col-span-1 p-2.5 rounded w-full border focus:outline-none focus:border-primary focus:ring-primary focus:ring-1"
+                                placeholder="Date"
+                            />
+                            <input
+                                type="text"
+                                name="time"
+                                id="time"
+                                class="md:col-span-1 p-2.5 rounded w-full border focus:outline-none focus:border-primary focus:ring-primary focus:ring-1"
+                                placeholder="Time"
+                            />
+                            <input
+                                type="number"
+                                name="numberOfPeople"
+                                id="numberOfPeople"
+                                class="md:col-span-1 p-2.5 rounded w-full border focus:outline-none focus:border-primary focus:ring-primary focus:ring-1"
+                                placeholder="# of people"
+                            />
+                            <textarea
+                                name="message"
+                                id="message"
+                                class="md:col-span-2 lg:col-span-3 p-2.5 rounded w-full border focus:outline-none focus:border-primary focus:ring-primary focus:ring-1"
+                                rows="5"></textarea>
+                        </div>
+                        <button
+                            type="submit"
+                            class="text-white bg-primary px-12 py-3 rounded-3xl mx-auto mt-5"
+                            >Book A Table</button
+                        >
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</Section>

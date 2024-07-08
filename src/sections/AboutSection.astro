@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import Section from "../components/Section.astro";
+
+import aboutImage from "../assets/img/about.jpg";
+---
+
+<Section>
+    <div class="text-center mb-7">
+        <h2 class="text-smoke uppercase text-sm mb-2">ABOUT US</h2>
+        <p class="amatic-sc-regular text-5xl">
+            Learn More <span class="text-primary">About Us</span>
+        </p>
+    </div>
+    <div class="lg:flex lg:gap-x-3">
+        <div class="lg:w-7/12 mb-7 lg:mb-0">
+            <Image src={aboutImage} alt="image" class="m-auto" />
+        </div>
+        <div class="lg:w-5/12 lg:pl-12">
+            <div class="text-smoke italic mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            <ul class="flex flex-col gap-y-5 mb-5">
+                <li class="flex items-center gap-x-4">
+                    <Icon name="mdi:check-all" class="w-10 text-primary" />
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Possimus, harum? Lorem ipsum dolor sit amet.
+                    </p>
+                </li>
+
+                <li class="flex items-center gap-x-4">
+                    <Icon name="mdi:check-all" class="w-10 text-primary" />
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Possimus, harum? Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                    </p>
+                </li>
+                <li class="flex items-center gap-x-4">
+                    <Icon name="mdi:check-all" class="w-10 text-primary" />
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Possimus, harum? Lorem ipsum dolor sit amet.
+                    </p>
+                </li>
+            </ul>
+            <div class="text-smoke mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro,
+                qui. Vitae odit dignissimos beatae explicabo saepe, assumenda
+                sint rerum provident.
+            </div>
+        </div>
+    </div>
+</Section>

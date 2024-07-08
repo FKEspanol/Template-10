@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import HeroImage from "../assets/img/hero-img.png";
+---
+
+<section class="w-full h-fit lg:min-h-[60vh] flex items-center bg-dim">
+    <div class="_container">
+        <div class="lg:flex lg:justify-between lg:items-center py-20">
+            <div
+                class="w-full text-center mb-14 lg:mt-20 lg:w-5/12 lg:mb-0 lg:text-start"
+            >
+                <h1
+                    class="text-7xl font-light amatic-sc-regular mb-5 leading-tight"
+                >
+                    Enjoy Your Healthy Delicious Food
+                </h1>
+                <p class="mb-7">
+                    Sed autem laudantium dolores. Voluptatem itaque ea
+                    consequatur eveniet. Eum quas beatae cumque eum quaerat.
+                </p>
+                <button class="text-white bg-primary px-8 py-3 rounded-3xl"
+                    >Get Started</button
+                >
+            </div>
+            <div class="w-full lg:mt-20 lg:w-5/12">
+                <Image src={HeroImage} alt="" class="w-full" />
+            </div>
+        </div>
+    </div>
+</section>

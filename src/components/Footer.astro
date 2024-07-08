@@ -1,0 +1,94 @@
+---
+import { Icon } from "astro-icon/components";
+import Section from "./Section.astro";
+---
+
+<footer>
+    <Section className="bg-dark">
+        <div
+            class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 pb-16 border-b border-b-smoke"
+        >
+            <div class="col-span-1">
+                <div class="flex">
+                    <Icon
+                        name="mdi:map-marker"
+                        class="text-white text-3xl mr-3"
+                    />
+                    <div class="block">
+                        <h6 class="text-lg text-white font-semibold mb-3">
+                            Address
+                        </h6>
+                        <p class="text-smoke text-sm">A108 Adam Street</p>
+                        <p class="text-smoke text-sm">
+                            New York, NY 535022 - US
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-1">
+                <div class="flex">
+                    <Icon name="mdi:phone" class="text-white text-3xl mr-3" />
+                    <div class="block">
+                        <h6 class="text-lg text-white font-semibold mb-3">
+                            Reservations
+                        </h6>
+                        <p class="text-smoke text-sm">
+                            <strong>Phone: </strong> +1 5589 55488 55
+                        </p>
+                        <p class="text-smoke text-sm">
+                            <strong>Email: </strong> info@email.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-1">
+                <div class="flex">
+                    <Icon
+                        name="mdi:clock-time-five"
+                        class="text-white text-3xl mr-3"
+                    />
+                    <div class="block">
+                        <h6 class="text-lg text-white font-semibold mb-3">
+                            Opening Hours
+                        </h6>
+                        <p class="text-smoke text-sm">
+                            <strong>Mon-Sat: </strong> 11AM - 11PM
+                        </p>
+                        <p class="text-smoke text-sm">
+                            <strong>Sunday: </strong> Closed
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-1">
+                <h6 class="text-lg text-white font-semibold mb-3">Follow Us</h6>
+                <div class="flex items-center gap-x-3">
+                    <Icon
+                        name="mdi:twitter"
+                        class="text-dim text-4xl p-2 rounded-full border border-white"
+                    />
+                    <Icon
+                        name="mdi:facebook"
+                        class="text-dim text-4xl p-2 rounded-full border border-white"
+                    />
+                    <Icon
+                        name="mdi:instagram"
+                        class="text-dim text-4xl p-2 rounded-full border border-white"
+                    />
+                    <Icon
+                        name="mdi:linkedin"
+                        class="text-dim text-4xl p-2 rounded-full border border-white"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-white pt-8">
+            <p class="mb-1">
+                &copy; Copyright <strong>Yummy.</strong> All Rights Reserved
+            </p>
+            <p class="text-sm">Designed by <strong>Karlo</strong></p>
+        </div>
+    </Section>
+</footer>

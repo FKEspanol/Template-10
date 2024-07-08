@@ -18,7 +18,7 @@
     "typescript": "^5.5.2"
   },
   "devDependencies": {
-    "daisyui": "^4.12.2",
+    "@iconify-json/mdi": "^1.1.67",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0"
   }

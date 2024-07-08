@@ -1,0 +1,163 @@
+---
+import eventsData from "../data/eventsData.json";
+---
+
+<section class="py-16">
+    <div class="text-center mb-14">
+        <h2 class="text-smoke uppercase text-sm mb-2">EVENTS</h2>
+        <p class="amatic-sc-regular text-5xl">
+            Share <span class="text-primary">Your Moments</span> In Our Restaurant
+        </p>
+    </div>
+
+    <div class="swiper events-slides">
+        <div class="swiper-wrapper">
+            <!-----Slide 1 -->
+            <div class="swiper-slide">
+                <div
+                    class={`relative w-full pb-[100%] bg-[url('/img/events/events-1.jpg')] bg-center bg-cover shadow-xl before:absolute before:w-full before:pb-[100%] before:bg-black before:bg-opacity-60`}
+                >
+                    <div class="absolute p-10 z-[5] bottom-0 text-white">
+                        <article>
+                            <h3 class="mb-3 text-2xl font-bold">
+                                Custom Parties
+                            </h3>
+                            <p
+                                class="mb-3 text-3xl font-bold w-fit border-b-[3px] border-b-primary pb-2"
+                            >
+                                $99
+                            </p>
+                            <p class="leading-normal">
+                                Quo corporis voluptas ea ad. Consectetur
+                                inventore sapiente ipsum voluptas eos omnis
+                                facere. Enim facilis veritatis id est rem
+                                repudiandae nulla expedita quas.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <!-----Slide 2 -->
+            <div class="swiper-slide">
+                <div
+                    class={`relative w-full pb-[100%] bg-[url('/img/events/events-2.jpg')] bg-center bg-cover shadow-xl before:absolute before:w-full before:pb-[100%] before:bg-black before:bg-opacity-60`}
+                >
+                    <div class="absolute p-10 z-[5] bottom-0 text-white">
+                        <article>
+                            <h3 class="mb-3 text-2xl font-bold">
+                                Birthday Parties
+                            </h3>
+                            <p
+                                class="mb-3 text-3xl font-bold w-fit border-b-[3px] border-b-primary pb-2"
+                            >
+                                $99
+                            </p>
+                            <p class="leading-normal">
+                                Quo corporis voluptas ea ad. Consectetur
+                                inventore sapiente ipsum voluptas eos omnis
+                                facere. Enim facilis veritatis id est rem
+                                repudiandae nulla expedita quas.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <!------Slide 3 -->
+            <div class="swiper-slide">
+                <div
+                    class={`relative w-full pb-[100%] bg-[url('/img/events/events-1.jpg')] bg-center bg-cover shadow-xl before:absolute before:w-full before:pb-[100%] before:bg-black before:bg-opacity-60`}
+                >
+                    <div class="absolute p-10 z-[5] bottom-0 text-white">
+                        <article>
+                            <h3 class="mb-3 text-2xl font-bold">
+                                Christmas Parties
+                            </h3>
+                            <p
+                                class="mb-3 text-3xl font-bold w-fit border-b-[3px] border-b-primary pb-2"
+                            >
+                                $99
+                            </p>
+                            <p class="leading-normal">
+                                Quo corporis voluptas ea ad. Consectetur
+                                inventore sapiente ipsum voluptas eos omnis
+                                facere. Enim facilis veritatis id est rem
+                                repudiandae nulla expedita quas.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-------Slide 4 -->
+            <div class="swiper-slide">
+                <div
+                    class={`relative w-full pb-[100%] bg-[url('/img/events/events-3.jpg')] bg-center bg-cover shadow-xl before:absolute before:w-full before:pb-[100%] before:bg-black before:bg-opacity-60`}
+                >
+                    <div class="absolute p-10 z-[5] bottom-0 text-white">
+                        <article>
+                            <h3 class="mb-3 text-2xl font-bold">
+                                Private Parties
+                            </h3>
+                            <p
+                                class="mb-3 text-3xl font-bold w-fit border-b-[3px] border-b-primary pb-2"
+                            >
+                                $99
+                            </p>
+                            <p class="leading-normal">
+                                Quo corporis voluptas ea ad. Consectetur
+                                inventore sapiente ipsum voluptas eos omnis
+                                facere. Enim facilis veritatis id est rem
+                                repudiandae nulla expedita quas.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    :root {
+        --swiper-pagination-bullet-width: 12px;
+        --swiper-pagination-bullet-height: 12px;
+    }
+</style>
+<script is:inline type="module">
+    const feedbackSwiper = new Swiper(".events-slides", {
+        // Optional parameters
+        speed: 600,
+        direction: "horizontal",
+        loop: true,
+
+        slidesPerView: "auto",
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        },
+
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: "swiper-pagination-bullet-active bg-primary",
+        },
+    });
+</script>
