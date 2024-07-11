@@ -1,40 +1,40 @@
 [
   {
     "filter": "breakfast",
-    "image": "breakfast-1.jpg"
+    "image": "breakfast-1.webp"
   },
   {
     "filter": "lunch",
-    "image": "lunch-1.jpg"
+    "image": "lunch-1.webp"
   },
 
   {
     "filter": "dinner",
-    "image": "dinner-2.jpg"
+    "image": "dinner-2.webp"
   },
   {
     "filter": "lunch",
-    "image": "lunch-2.jpg"
+    "image": "lunch-2.webp"
   },
   {
     "filter": "dinner",
-    "image": "dinner-2.jpg"
+    "image": "dinner-1.webp"
   },
   {
     "filter": "breakfast",
-    "image": "breakfast-2.jpg"
+    "image": "breakfast-2.webp"
   },
 
   {
     "filter": "dinner",
-    "image": "dinner-3.jpg"
+    "image": "dinner-3.webp"
   },
   {
     "filter": "breakfast",
-    "image": "breakfast-3.jpg"
+    "image": "breakfast-3.webp"
   },
   {
     "filter": "lunch",
-    "image": "lunch-3.jpg"
+    "image": "lunch-3.webp"
   }
 ]

@@ -3,10 +3,10 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import Section from "../components/Section.astro";
 
-import aboutImage from "../assets/img/about.jpg";
+import aboutImage from "../assets/img/about.webp";
 ---
 
-<Section>
+<Section id="about">
     <div class="text-center mb-7">
         <h2 class="text-smoke uppercase text-sm mb-2">ABOUT US</h2>
         <p class="amatic-sc-regular text-5xl">
@@ -15,7 +15,7 @@ import aboutImage from "../assets/img/about.jpg";
     </div>
     <div class="lg:flex lg:gap-x-3">
         <div class="lg:w-7/12 mb-7 lg:mb-0">
-            <Image src={aboutImage} alt="image" class="m-auto" />
+            <Image src={aboutImage} alt="image" class="m-auto" loading="lazy" />
         </div>
         <div class="lg:w-5/12 lg:pl-12">
             <div class="text-smoke italic mb-4">

@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 import Section from "../components/Section.astro";
 ---
 
-<Section>
+<Section id="contact">
     <div class="text-center mb-14">
         <h2 class="text-smoke uppercase text-sm mb-2">Contact</h2>
         <p class="amatic-sc-regular text-5xl">
@@ -20,8 +20,8 @@ import Section from "../components/Section.astro";
                     style="height:100%; width:100%;max-width:100%;"
                 >
                     <iframe
+                        title="Iframe for contacts map area"
                         style="height:100%;width:100%;border:0;"
-                        frameborder="0"
                         src="https://www.google.com/maps/embed/v1/place?q=Cabantian,+Buhangin,+Davao+City,+Davao+del+Sur,+Philippines&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                     ></iframe>
                 </div><a
@@ -47,9 +47,9 @@ import Section from "../components/Section.astro";
                         class="text-4xl text-white bg-primary w-14 h-14 p-2 rounded-full text-center mr-3"
                     />
                     <div class="block">
-                        <h5 class="text-xl mb-2 text-smoke font-semibold">
+                        <h3 class="text-xl mb-2 text-smoke font-semibold">
                             Our Address
-                        </h5>
+                        </h3>
                         <p>A108 Adam Street, New York, NY 535022</p>
                     </div>
                 </div>
@@ -65,9 +65,9 @@ import Section from "../components/Section.astro";
                     />
 
                     <div class="block">
-                        <h5 class="text-xl mb-2 text-smoke font-semibold">
+                        <h3 class="text-xl mb-2 text-smoke font-semibold">
                             Email Us
-                        </h5>
+                        </h3>
                         <p>contact@example.com</p>
                     </div>
                 </div>
@@ -83,9 +83,9 @@ import Section from "../components/Section.astro";
                     />
 
                     <div class="block">
-                        <h5 class="text-xl mb-2 text-smoke font-semibold">
+                        <h3 class="text-xl mb-2 text-smoke font-semibold">
                             Call Us
-                        </h5>
+                        </h3>
                         <p>+1 12345 789</p>
                     </div>
                 </div>
@@ -101,9 +101,9 @@ import Section from "../components/Section.astro";
                     />
 
                     <div class="block">
-                        <h5 class="text-xl mb-2 text-smoke font-semibold">
+                        <h3 class="text-xl mb-2 text-smoke font-semibold">
                             Opening Hours
-                        </h5>
+                        </h3>
                         <p>
                             <strong>Mon-Sat: </strong>11AM-11PM; <strong
                                 >Sunday:
@@ -115,9 +115,10 @@ import Section from "../components/Section.astro";
         </div>
 
         <div class="col-span-2">
-            <form action="" class="p-7 bg-dim text-center">
+            <form id="contactForm" action="" class="p-7 bg-dim text-center">
                 <div class="grid lg:grid-cols-2 gap-5">
-                    <div class="lg:col-span-1">
+                    <div class="lg:col-span-1 text-start">
+                        <label for="name">Name</label>
                         <input
                             type="text"
                             name="name"
@@ -126,7 +127,8 @@ import Section from "../components/Section.astro";
                             placeholder="Your Name"
                         />
                     </div>
-                    <div class="lg:col-span-1">
+                    <div class="lg:col-span-1 text-start">
+                        <label for="email">Email</label>
                         <input
                             type="email"
                             name="email"
@@ -135,7 +137,8 @@ import Section from "../components/Section.astro";
                             placeholder="Your Email"
                         />
                     </div>
-                    <div class="lg:col-span-2">
+                    <div class="lg:col-span-2 text-start">
+                        <label for="subject">Subject</label>
                         <input
                             type="text"
                             name="subject"
@@ -144,7 +147,8 @@ import Section from "../components/Section.astro";
                             placeholder="Subject"
                         />
                     </div>
-                    <div class="lg:col-span-2">
+                    <div class="lg:col-span-2 text-start">
+                        <label for="message">Message</label>
                         <textarea
                             name="message"
                             id="message"

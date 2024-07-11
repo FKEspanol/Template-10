@@ -1,18 +1,104 @@
-<header class="w-full fixed py-7 shadow-lg z-10 bg-white">
+---
+import { Icon } from "astro-icon/components";
+const links = [
+    "home",
+    "about",
+    "menu",
+    "events",
+    "chefs",
+    "gallery",
+    "contact",
+];
+---
+
+<header id="header-navbar" class="w-full fixed py-7 shadow-lg z-10 bg-white">
     <div class="_container">
         <div class="flex justify-between items-center">
-            <a href="/" class="text-3xl font-semibold"
+            <a href="#home" class="text-3xl font-semibold"
                 >Yummy<span class="text-primary">.</span>
             </a>
             <ul class="hidden lg:flex items-center gap-x-8">
-                <li><a href="/home" class="font-semibold">Home</a></li>
-                <li><a href="/about" class="font-semibold">About</a></li>
-                <li><a href="/menu" class="font-semibold">Menu</a></li>
-                <li><a href="/event" class="font-semibold">Event</a></li>
-                <li><a href="/chefs" class="font-semibold">Chefs</a></li>
-                <li><a href="/gallery" class="font-semibold">Gallery</a></li>
-                <li><a href="/contact" class="font-semibold">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li>
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li>
+                    <a href="#events" class="nav-link">Event</a>
+                </li>
+                <li>
+                    <a href="#chefs" class="nav-link">Chefs</a>
+                </li>
+                <li>
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
             </ul>
+            <button id="sidebar-btn" class="lg:hidden flex items-center">
+                <Icon name="mdi:menu" class="text-2xl" />
+            </button>
         </div>
     </div>
 </header>
+<div
+    id="sidebar"
+    class="fixed -right-[400px] top-0 bottom-0 min-h-screen max-w-[400px] w-full z-[12] transition-all duration-500 bg-dim"
+>
+    <button
+        id="sidebar-close-btn"
+        class="py-10 pl-8 transition-all duration-300"
+    >
+        <Icon name="mdi:window-close" class="text-3xl" />
+    </button>
+    <ul>
+        {
+            links.map((link) => (
+                <li>
+                    <a
+                        href={`#${link}`}
+                        class="nav-link block py-3 pl-8 transition-all duration-200 text-sm hover:bg-secondary uppercase"
+                    >
+                        {link}
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</div>
+
+<script is:inline>
+    // Open and close sidebar on smaller screen
+    const sidebarBtn = document.getElementById("sidebar-btn");
+    const sidebar = document.getElementById("sidebar");
+    const sidebarCloseBtn = document.getElementById("sidebar-close-btn");
+
+    sidebarBtn.onclick = () => {
+        sidebar.classList.remove("-right-[400px]");
+        sidebar.classList.add("right-0");
+    };
+
+    sidebarCloseBtn.onclick = () => {
+        sidebar.classList.remove("right-0");
+        sidebar.classList.add("-right-[400px]");
+    };
+
+    // scroll to section
+    const headerNavbar = document.getElementById("header-navbar");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const sectionID = link.getAttribute("href").replace("#", "");
+            console.log(sectionID);
+            window.scrollTo({
+                top:
+                    document.getElementById(sectionID).offsetTop -
+                    headerNavbar.offsetHeight,
+                behavior: "smooth",
+            });
+        });
+    });
+</script>

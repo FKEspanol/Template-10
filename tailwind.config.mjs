@@ -17,7 +17,7 @@ export default {
 
       colors: {
         primary: "#ce1212",
-        smoke: "#6c757d",
+        smoke: "#3c4145",
         dim: "#eeeeee",
         dark: "#1f1f24",
       },

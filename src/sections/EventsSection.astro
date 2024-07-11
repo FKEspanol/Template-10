@@ -1,8 +1,4 @@
----
-import eventsData from "../data/eventsData.json";
----
-
-<section class="py-16">
+<section id="events" class="py-16">
     <div class="text-center mb-14">
         <h2 class="text-smoke uppercase text-sm mb-2">EVENTS</h2>
         <p class="amatic-sc-regular text-5xl">
@@ -15,7 +11,7 @@ import eventsData from "../data/eventsData.json";
             <!-----Slide 1 -->
             <div class="swiper-slide">
                 <div
-                    class={`relative w-full pb-[100%] bg-[url('/img/events/events-1.jpg')] bg-center bg-cover shadow-xl before:absolute before:w-full before:pb-[100%] before:bg-black before:bg-opacity-60`}
+                    class={`relative w-full pb-[100%] bg-[url('/img/events/events-1.webp')] bg-center bg-cover shadow-xl before:absolute before:w-full before:pb-[100%] before:bg-black before:bg-opacity-60`}
                 >
                     <div class="absolute p-10 z-[5] bottom-0 text-white">
                         <article>
@@ -40,7 +36,7 @@ import eventsData from "../data/eventsData.json";
             <!-----Slide 2 -->
             <div class="swiper-slide">
                 <div
-                    class={`relative w-full pb-[100%] bg-[url('/img/events/events-2.jpg')] bg-center bg-cover shadow-xl before:absolute before:w-full before:pb-[100%] before:bg-black before:bg-opacity-60`}
+                    class={`relative w-full pb-[100%] bg-[url('/img/events/events-2.webp')] bg-center bg-cover shadow-xl before:absolute before:w-full before:pb-[100%] before:bg-black before:bg-opacity-60`}
                 >
                     <div class="absolute p-10 z-[5] bottom-0 text-white">
                         <article>
@@ -65,7 +61,7 @@ import eventsData from "../data/eventsData.json";
             <!------Slide 3 -->
             <div class="swiper-slide">
                 <div
-                    class={`relative w-full pb-[100%] bg-[url('/img/events/events-1.jpg')] bg-center bg-cover shadow-xl before:absolute before:w-full before:pb-[100%] before:bg-black before:bg-opacity-60`}
+                    class={`relative w-full pb-[100%] bg-[url('/img/events/events-1.webp')] bg-center bg-cover shadow-xl before:absolute before:w-full before:pb-[100%] before:bg-black before:bg-opacity-60`}
                 >
                     <div class="absolute p-10 z-[5] bottom-0 text-white">
                         <article>
@@ -91,7 +87,7 @@ import eventsData from "../data/eventsData.json";
             <!-------Slide 4 -->
             <div class="swiper-slide">
                 <div
-                    class={`relative w-full pb-[100%] bg-[url('/img/events/events-3.jpg')] bg-center bg-cover shadow-xl before:absolute before:w-full before:pb-[100%] before:bg-black before:bg-opacity-60`}
+                    class={`relative w-full pb-[100%] bg-[url('/img/events/events-3.webp')] bg-center bg-cover shadow-xl before:absolute before:w-full before:pb-[100%] before:bg-black before:bg-opacity-60`}
                 >
                     <div class="absolute p-10 z-[5] bottom-0 text-white">
                         <article>
@@ -117,14 +113,8 @@ import eventsData from "../data/eventsData.json";
     </div>
 </section>
 
-<style>
-    :root {
-        --swiper-pagination-bullet-width: 12px;
-        --swiper-pagination-bullet-height: 12px;
-    }
-</style>
 <script is:inline type="module">
-    const feedbackSwiper = new Swiper(".events-slides", {
+    new Swiper(".events-slides", {
         // Optional parameters
         speed: 600,
         direction: "horizontal",
@@ -154,10 +144,10 @@ import eventsData from "../data/eventsData.json";
         },
 
         // If we need pagination
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            bulletActiveClass: "swiper-pagination-bullet-active bg-primary",
-        },
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        //     bulletActiveClass: "swiper-pagination-bullet-active bg-primary",
+        // },
     });
 </script>

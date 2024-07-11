@@ -1,10 +1,9 @@
 ---
-import { Image } from "astro:assets";
 import Section from "../components/Section.astro";
 import menuData from "../data/menuData.json";
 ---
 
-<Section>
+<Section id="menu">
     <div class="text-center mb-7">
         <h2 class="text-smoke uppercase text-sm mb-2">OUR MENU</h2>
         <p class="amatic-sc-regular text-5xl">
@@ -38,7 +37,7 @@ import menuData from "../data/menuData.json";
     </section>
     <!---------Grid area------- -->
     <section class="mt-8">
-        <ul class="flex flex-wrap menu-container">
+        <ul class="flex flex-wrap menu-container gap-8">
             {
                 menuData.map((i) => (
                     <li
@@ -50,9 +49,11 @@ import menuData from "../data/menuData.json";
                             class="menu-lightbox"
                         >
                             <img
-                                src={`/img/menu/${i.image}`}
+                                src={`/img/menu-placeholder.webp`}
                                 alt={`${i.filter}-image`}
-                                class="w-full rounded-2xl"
+                                class="lazy w-full rounded-2xl"
+                                data-src={`/img/menu/${i.image}`}
+                                data-srcset={`/img/menu/${i.image}`}
                             />
                         </a>
                     </li>
@@ -61,6 +62,35 @@ import menuData from "../data/menuData.json";
         </ul>
     </section>
 </Section>
+
+<script is:inline type="module">
+    document.addEventListener("DOMContentLoaded", function () {
+        var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+        if ("IntersectionObserver" in window) {
+            let lazyImageObserver = new IntersectionObserver(function (
+                entries,
+                observer,
+            ) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        let lazyImage = entry.target;
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.srcset = lazyImage.dataset.srcset;
+                        lazyImage.classList.remove("lazy");
+                        lazyImageObserver.unobserve(lazyImage);
+                    }
+                });
+            });
+
+            lazyImages.forEach(function (lazyImage) {
+                lazyImageObserver.observe(lazyImage);
+            });
+        } else {
+            // Possibly fall back to event handlers here
+        }
+    });
+</script>
 
 <script is:inline type="module">
     const select = (query, all = false) => {

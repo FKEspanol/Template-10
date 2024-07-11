@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import Section from "../components/Section.astro";
 import testimonialsData from "../data/testimonialsData.json";
 ---
@@ -22,20 +23,24 @@ import testimonialsData from "../data/testimonialsData.json";
                                         src={`/img/testimonials/${i.image}`}
                                         alt={`picture of ${i.fullName}`}
                                         class="w-[90px] h-[90px] object-cover md:rounded-lg md:p-[6px] md:bg-white md:absolute md:-left-11"
+                                        loading="lazy"
                                     />
 
                                     <div class="ml-4 md:ml-0">
-                                        <h5 class="text-lg font-bold">
+                                        <h3 class="text-lg font-bold">
                                             {i.fullName}
-                                        </h5>
+                                        </h3>
                                         <small class="text-sm text-gray-500 font-bold block">
                                             {i.clientJob}
                                         </small>
-                                        <ol class="mt-2">
-                                            {[1, 2, 3, 4, 5].map((icon) => (
-                                                <i class="fa-solid fa-star text-primary text-lg" />
+                                        <div class="mt-2 flex gap-1">
+                                            {[1, 2, 3, 4, 5].forEach(() => (
+                                                <Icon
+                                                    name="mdi:star"
+                                                    class="text-primary text-lg"
+                                                />
                                             ))}
-                                        </ol>
+                                        </div>
                                     </div>
                                 </div>
                                 <p class="italic text-[#64757f] py-4">
@@ -53,12 +58,13 @@ import testimonialsData from "../data/testimonialsData.json";
 
 <style>
     :root {
-        --swiper-pagination-bullet-width: 12px;
-        --swiper-pagination-bullet-height: 12px;
+        --swiper-pagination-bullet-width: 16px;
+        --swiper-pagination-bullet-height: 16px;
+        --swiper-pagination-bullet-horizontal-gap: 8px;
     }
 </style>
 <script is:inline type="module">
-    const feedbackSwiper = new Swiper(".testimonials-slides", {
+    new Swiper(".testimonials-slides", {
         // Optional parameters
         speed: 600,
         direction: "horizontal",

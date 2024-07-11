@@ -2,12 +2,12 @@
 import { Image } from "astro:assets";
 import Section from "../components/Section.astro";
 
-import chefImg1 from "../assets/img/chefs/chefs-1.jpg";
-import chefImg2 from "../assets/img/chefs/chefs-2.jpg";
-import chefImg3 from "../assets/img/chefs/chefs-3.jpg";
+import chefImg1 from "../assets/img/chefs/chefs-1.webp";
+import chefImg2 from "../assets/img/chefs/chefs-2.webp";
+import chefImg3 from "../assets/img/chefs/chefs-3.webp";
 ---
 
-<Section className="bg-dim">
+<Section id="chefs" className="bg-dim">
     <div class="text-center mb-14">
         <h2 class="text-smoke uppercase text-sm mb-2">CHEFS</h2>
         <p class="amatic-sc-regular text-5xl">
@@ -25,9 +25,10 @@ import chefImg3 from "../assets/img/chefs/chefs-3.jpg";
                 src={chefImg1}
                 alt="Image of first chef"
                 class="w-full rounded-xl"
+                loading="lazy"
             />
             <div class="p-8">
-                <h4 class="text-xl font-semibold mb-1">Walter White</h4>
+                <h3 class="text-xl font-semibold mb-1">Walter White</h3>
                 <small class="text-smoke">MasterChef</small>
                 <p class="py-4 text-smoke italic text-sm leading-relaxed">
                     Velit aut quia fugit et et. Dolorum ea voluptate vel tempore
@@ -44,9 +45,10 @@ import chefImg3 from "../assets/img/chefs/chefs-3.jpg";
                 src={chefImg2}
                 alt="Image of first chef"
                 class="w-full rounded-xl"
+                loading="lazy"
             />
             <div class="p-8">
-                <h4 class="text-xl font-semibold mb-1">Sarah Jhonson</h4>
+                <h3 class="text-xl font-semibold mb-1">Sarah Jhonson</h3>
                 <small class="text-smoke">Patissier</small>
                 <p class="py-4 text-smoke italic text-sm leading-relaxed">
                     Quo esse repellendus quia id. Est eum et accusantium
@@ -63,9 +65,10 @@ import chefImg3 from "../assets/img/chefs/chefs-3.jpg";
                 src={chefImg3}
                 alt="Image of first chef"
                 class="w-full rounded-xl"
+                loading="lazy"
             />
             <div class="p-8">
-                <h4 class="text-xl font-semibold mb-1">William Doe</h4>
+                <h3 class="text-xl font-semibold mb-1">William Doe</h3>
                 <small class="text-smoke">Cook</small>
                 <p class="py-4 text-smoke italic text-sm leading-relaxed">
                     Vero omnis enim consequatur. Voluptas consectetur unde qui

@@ -3,24 +3,24 @@
     "fullName": "Sarah Jones",
     "clientJob": "CEO",
     "feedback": "The FutureFusion team brought my vision to life! Their expertise and creativity were essential to my productivity",
-    "image": "testimonials-1.jpg"
+    "image": "testimonials-1.webp"
   },
   {
     "fullName": "Gwen Lee",
     "clientJob": "Marketing Manager",
     "feedback": "FutureFusion impressed me with their ability to grasp our needs and deliver a product that surpassed expectations.",
-    "image": "testimonials-2.jpg"
+    "image": "testimonials-2.webp"
   },
   {
     "fullName": "Emily Garcia",
     "clientJob": "Freelancer",
     "feedback": "Working with FutureFusion was a delight. They were responsive, professional, and delivered high-quality work on schedule.",
-    "image": "testimonials-3.jpg"
+    "image": "testimonials-3.webp"
   },
   {
     "fullName": "Olivia Rodriguez",
     "clientJob": "Developer",
     "feedback": "FutureFusion' team is knowledgeable and experienced. They assisted us in conquering problems and achieving our goals.",
-    "image": "testimonials-4.jpg"
+    "image": "testimonials-4.webp"
   }
 ]

@@ -2,18 +2,18 @@
 import Section from "../components/Section.astro";
 
 const galleryImages = [
-    "gallery-1.jpg",
-    "gallery-2.jpg",
-    "gallery-3.jpg",
-    "gallery-4.jpg",
-    "gallery-5.jpg",
-    "gallery-6.jpg",
-    "gallery-7.jpg",
-    "gallery-8.jpg",
+    "gallery-1.webp",
+    "gallery-2.webp",
+    "gallery-3.webp",
+    "gallery-4.webp",
+    "gallery-5.webp",
+    "gallery-6.webp",
+    "gallery-7.webp",
+    "gallery-8.webp",
 ];
 ---
 
-<Section className="bg-dim">
+<Section id="gallery" className="bg-dim">
     <div class="text-center mb-14">
         <h2 class="text-smoke uppercase text-sm mb-2">Gallery</h2>
         <p class="amatic-sc-regular text-5xl">
@@ -30,7 +30,11 @@ const galleryImages = [
                             data-gallery="gallery-images"
                             class="gallery-lightbox"
                         >
-                            <img src={`/img/gallery/${i}`} alt={i} />
+                            <img
+                                src={`/img/gallery/${i}`}
+                                alt={i}
+                                loading="lazy"
+                            />
                         </a>
                     </div>
                 ))
@@ -40,7 +44,7 @@ const galleryImages = [
 </Section>
 
 <script is:inline type="module">
-    const feedbackSwiper = new Swiper(".gallery-slides", {
+    new Swiper(".gallery-slides", {
         // Optional parameters
         speed: 600,
         direction: "horizontal",
@@ -70,11 +74,11 @@ const galleryImages = [
         },
 
         // If we need pagination
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            bulletActiveClass: "swiper-pagination-bullet-active bg-primary",
-        },
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        //     bulletActiveClass: "swiper-pagination-bullet-active bg-primary",
+        // },
     });
 
     GLightbox({
